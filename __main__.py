@@ -1,4 +1,4 @@
-import lib.getToken
+import modules.getToken
 import base64
 import hashlib
 import os.path
@@ -101,7 +101,7 @@ for i in messages:
     #print(i.body)
     for a in i.attachments:
         uniqueName = hashlib.sha256(a.outlook_id.encode()).hexdigest()[0:8].upper() #Creates a unique 8-digit id from a semi-random id
-        filename = "["+uniqueName+"] "+a.name
+        filename = "attachments/["+uniqueName+"] "+a.name
         print("  # Downloading attachment \""+a.name+"\"")
         if(os.path.isfile(filename)):
             print("  # Attachment already downloaded as \""+filename+"\"")
