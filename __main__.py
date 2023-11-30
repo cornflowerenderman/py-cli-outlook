@@ -48,7 +48,7 @@ else:
 print()
 userAgent = "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/119.0"
 print("Getting token, this may take a few seconds")
-token = lib.getToken.getOutlookToken(userAgent, cookie, isBusiness) #True for business, false for personal
+token = modules.getToken.getOutlookToken(userAgent, cookie, isBusiness) #True for business, false for personal
 print("Found token: ",token[0:10]+"..."+token[-10:])
 
 account = OutlookAccount(token)
